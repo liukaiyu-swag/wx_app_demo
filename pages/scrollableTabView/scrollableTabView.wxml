@@ -1,0 +1,34 @@
+<view class="stv-container">
+
+<!-- 顶部start -->
+  <view class="tab-bar">
+    <view wx:for="{{tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{activeTab==index?'tab-active':''}}" style="width: {{stv.lineWidth}}px">
+      <text>{{item}}</text>
+    </view>
+    <!-- 顶部高亮条start -->
+    <view style="width: {{stv.lineWidth}}px; left: {{stv.offset/tabs.length}}px" class="under-line {{!stv.tStart? 'withAnimate': ''}}"></view>
+    <!-- 顶部高亮条end -->
+  </view>
+  <!-- 顶部end -->
+  <!-- 底部内容页start -->
+  <view class="scroll-view">
+  <!-- 操作层start -->
+    <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd"  class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
+    <!-- 页面内容start -->
+      <view style="width: {{stv.windowWidth}}px;" wx:for="{{tabs}}" wx:key="unique" class="one-scene">
+      <!-- 内容层滑动start -->
+        <scroll-view style="height:100%" scroll-y>
+        <!-- 内容start -->
+          <view wx:for="1234567777777" wx:key="unique">
+            <text>这是第{{index+1}}个页面</text>
+          </view>
+        <!-- 内容end -->          
+        </scroll-view>
+      <!-- 内容层滑动end -->        
+      </view>
+    <!-- 页面内容end -->      
+    </view>
+  <!-- 操作层end -->    
+  </view>
+  <!-- 底部内容页end -->
+</view>

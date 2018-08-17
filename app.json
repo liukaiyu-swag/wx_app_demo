@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/swiper/swiper",
+    "pages/scrollableTabView/scrollableTabView"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2d80ff",
+    "navigationBarTitleText": "小程序demo",
+    "navigationBarTextStyle":"white"
+  }
+}

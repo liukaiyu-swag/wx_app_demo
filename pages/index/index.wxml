@@ -1,0 +1,4 @@
+<!--pages/index/index.wxml-->
+<block wx:for="{{content}}" wx:key="unique">
+<button bindtap='bindcontent' data-url="{{item.url}}">{{item.name}}</button>
+</block>
